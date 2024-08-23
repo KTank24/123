@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sicherheitswarnung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            animation: blink 1s infinite;
+        }
+        .warning {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 2px solid #f5c6cb;
+            padding: 40px;
+            display: inline-block;
+            z-index: 1;
+            position: relative;
+            color: #721c24;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        @keyframes blink {
+            0% { background-color: #f8d7da; }
+            50% { background-color: #fff3cd; }
+            100% { background-color: #f8d7da; }
+        }
+    </style>
+    <script>
+        function autoClose() {
+            setTimeout(function() {
+                window.close();
+            }, 10000);
+        }
+        window.onload = autoClose;
+    </script>
+</head>
+<body>
+    <div class="warning">
+        <h1>Achtung!</h1>
+        <p>Dies ist eine Phishing-Simulation. Klicke nicht auf unbekannte Links!</p>
+    </div>
+</body>
+</html>
